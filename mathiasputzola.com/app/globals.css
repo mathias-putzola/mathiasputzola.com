@@ -3,25 +3,77 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --background-color: #000;
+    --text-color: #fff;
+    --font-geist-sans: 'GeistSans', sans-serif;
+    --font-geist-mono: 'GeistMono', monospace;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-geist-sans);
+}   
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    height: 100vh; /* Pleine hauteur de la page */
+  }
+  
+  .left-div {
+    background-color: #000000;
+    border-right: 1px solid #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 90px;
+  }
+  
+  .right-div {
+    background-color: #00000000;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 90px;
+  }
+
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10vw; /* Marges gauche et droite de 10% de la largeur de l'écran */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.centered-text {
+    text-align: center;
+    max-width: 800px; /* Limite la largeur du texte */
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.2rem; /* Ajuste la taille du texte */
+}
+
+.text-container {
+    max-width: 900px; /* Largeur maximale pour limiter la largeur du texte */
+    margin: 0 auto;   /* Centre le texte horizontalement */
+    padding: 0 50px;  /* Ajoute des marges internes */
+    font-size: 18px;  /* Ajuste la taille de la police */
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #ffffff;   /* Couleur du texte */
+    text-align: center; /* Centre le texte */
   }
+  /* Optionnel : ajuster les marges sur des écrans plus larges */
+  @media (min-width: 1200px) {
+    .text-container {
+      padding: 0 200px; /* Marges plus importantes sur les grands écrans */
+    }
+  }
+
+.marge {
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 500px;
 }

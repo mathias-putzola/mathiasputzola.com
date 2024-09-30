@@ -1,6 +1,5 @@
 # mathiasputzola.com
-My Portfolio Website
-
+Mon portfolio personnel
 Création du projet avec Next.js et TailwindCSS :
 
 ```bash
