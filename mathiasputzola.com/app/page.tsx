@@ -1,24 +1,28 @@
-import { Navbar } from "./components/Navbar";
-import Hero from "./components/Hero";
-// import FirstSection from "./components/FirstSection";
+// page.tsx
+"use client";
+
+import React from "react";
+import dynamic from "next/dynamic";
+import Hero from "./components/Hero"
 import { Timeline } from "./components/Timeline";
 import { timelineData } from "./components/requirements/Timeline-Data";
+import Presentation from "./components/Presentation";
 
+const MatrixRain = dynamic(() => import("./components/MatrixRain"), {
+    ssr: false,
+});
 
-export default function Home() {
+const Page = () => {
     return (
-        <main>
-            <Navbar navItems={[
-                { name: "Accueil ", link: "#home" },
-                { name: "Cybersécurité", link: "#cyber" },
-                { name: "Développeur Web", link: "#dev" },
-                { name: "Services", link: "#services" },
-                { name: "Contact ", link: "#contact" },
-            ]} />
+        <div className="relative">
+            {/* Effet de pluie en arrière-plan */}
+            <MatrixRain />
             <Hero />
-            {/* <FirstSection /> */}
-            <Timeline data={timelineData} />
+            <Presentation />
+            <Timeline data={timelineData.map(item => ({...item, imageSrc: item.imageSrc.src}))} />
+          {/* Contenu principal */}
+        </div>
+  );
+};
 
-        </main>
-    );
-}
+export default Page;

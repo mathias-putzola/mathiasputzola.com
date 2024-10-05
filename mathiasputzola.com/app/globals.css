@@ -4,12 +4,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -33,4 +33,44 @@ body {
 
 .vert {
   color :#48DD3B
+
+}
+
+
+.neon-text-matrix {
+  color: #fff;
+  text-shadow:
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(0, 255, 0, 0.5),
+    0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.neon-text-text {
+  color: #fff;
+  text-shadow:
+    0 0 2px rgba(255, 255, 255, 0.5),
+    0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.padd {
+  /* padding-right: 25rem; */
+  border-color: #48DD3B;
+  border-radius: 50px;
+  border-width: 2px;
+  background-color: #000000;
+}
+
+.neon-image {
+  filter: drop-shadow(0 0 10px #0f0);
+}
+
+.paddd {
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: black;
+    border-width: 2px;
+    border-color: #48dd3b;
+    border-radius: 50px;
 }

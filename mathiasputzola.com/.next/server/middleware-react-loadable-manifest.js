@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app/page.tsx -> ./components/MatrixRain\":{\"id\":\"app/page.tsx -> ./components/MatrixRain\",\"files\":[\"static/chunks/_app-pages-browser_app_components_MatrixRain_tsx.js\"]}}"
